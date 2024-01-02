@@ -22,7 +22,20 @@ To write a python program to implement multivariate linear regression and predic
 
 ## Program:
 ```
+Developed by: SAI GURU CHANDRAN G
+Register number: 23014037
 
+import pandas as pd
+from sklearn import linear_model
+df=pd.read_csv("sai.csv")
+x=df[['Weight','Volume']]
+y=df['CO2']
+regr=linear_model.LinearRegression()
+regr.fit(x,y)
+print("Coefficient:",regr.coef_)
+print("Intercept:",regr.intercept_)
+predictedCO2=regr.predict([[3300,1300]])
+print("Predicted CO@ for the corresponding weight and volume",predictedCO2)
 
 
 
@@ -30,10 +43,11 @@ To write a python program to implement multivariate linear regression and predic
 
 ```
 ## Output:
+![WhatsApp Image 2024-01-02 at 18 25 31_d323c27d](https://github.com/Saiguruchandran/Multivariate-Linear-Regression/assets/144870946/7c37fb69-aaf1-4471-89be-d88e1fe9d7d9)
 
 ### Insert your output
-
-<br>
-
+Coefficient: [0.00755095 0.00780526]
+Intercept: 79.69471929115939
+Predicted CO@ for the corresponding weight and volume [114.75968007]
 ## Result
 Thus the multivariate linear regression is implemented and predicted the output using python program.
